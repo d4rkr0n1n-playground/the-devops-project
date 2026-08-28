@@ -40,11 +40,11 @@ This workflow runs on pull requests targeting `main` and manually via `workflow_
 
 It performs:
 
-- Build stage
-- Test stage with unit, integration, functional, E2E, and exploratory checks
-- Preview environment deployment stage for pull requests
+- Build stage (currently a placeholder echo step)
+- Test stage with unit, integration, functional, E2E, and exploratory placeholders
+- Preview stage for pull requests (currently echo-only; no actual deployment)
 
-The main intent is to validate changes before they are merged and provide a preview flow during the review process.
+The main intent is to validate changes before they are merged and demonstrate a preview stage during the review process.
 
 ### 2. Development Deployment
 File: `.github/workflows/Deploy-to-Dev.yml`
