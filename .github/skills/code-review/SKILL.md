@@ -11,7 +11,7 @@ Review code changes with a structured lens on security, performance, correctness
 ## Usage
 
 ```
-/code-review <PR URL or file path>
+/code-review <PR URL, diff, or file path>
 ```
 
 Review the provided code changes: @$1
