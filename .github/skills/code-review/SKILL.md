@@ -100,7 +100,7 @@ If no specific file or URL is provided, ask what to review.
 
 ## If Connectors Available
 
-If **~~source control** is connected:
+If **source control** is connected:
 - Pull the PR diff automatically from the URL
 - Check CI status and test results
 
