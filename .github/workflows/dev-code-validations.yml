@@ -1,0 +1,47 @@
+name: Dev Code Validations
+on:
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run a one-line script
+        run: echo Building Project !
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Unit Tests
+        run: echo Unit Tests !
+      - name: Integration Tests
+        run: echo Integration Tests !
+      - name: Functional Tests
+        run: echo Functional Tests !
+      - name: Integration Tests
+        run: echo Integration Tests !
+      - name: E2E Tests
+        run: echo E2E Tests !
+      - name: Exploratory Tests
+        run: echo Exploratory Tests !
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: PR Preview
+        run: |
+          echo "PR Preview: [link]!"
+      - name: PR Changes Review
+        run: |
+          sleep 60
+      - name: PR Review Completed
+        run: |
+          echo "PR Review Completed !"
+  upload-artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/upload-artifact@v7
+        with:
+          name: the-devops-project-artifact
+          path: .
+      
