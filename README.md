@@ -1,3 +1,3 @@
 # The DevOps Project
 
-My project of DevOps platform.
+My DevOps platform project.
