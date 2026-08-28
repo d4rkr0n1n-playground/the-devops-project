@@ -3,14 +3,14 @@ on:
   workflow_dispatch:
   pull_request:
     branches: [ "main" ]
-permissions:
-  attestations: write
-  id-token: write
-  contents: read
 jobs:
   upload-attest-download-artifact:
     name: Upload, Attest, and Download Artifact
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      attestations: write
+      id-token: write
     steps:
       - uses: actions/checkout@v4
       - name: Upload artifact
