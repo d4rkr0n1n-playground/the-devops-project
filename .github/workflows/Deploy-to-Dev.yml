@@ -2,14 +2,25 @@ name: Dev Deployment
 on:
   workflow_dispatch:
 jobs:
+  upload-artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          name: the-devops-project-artifact
+          path: .
+      - name: Attest Build Provenance
+        uses: actions/attest-build-provenance@v4.2.2
+        with:
+          subject-path: .
   download-artifact:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v5
         with:
           name: the-devops-project-artifact
-      - name: Display structure of downloaded files
-        run: ls -R
   deploy-to-dev:
     runs-on: ubuntu-latest
     needs: download-artifact
