@@ -22,14 +22,18 @@ jobs:
         uses: actions/attest-build-provenance@v4.2.2
         with:
           subject-path: "build/**"
-      - uses: actions/download-artifact@v5
+      - name: Download artifact
+        uses: actions/download-artifact@v5
         with:
           name: the-devops-project-artifact
   deploy-to-dev:
+    name: Deploy to Dev Environment
     runs-on: ubuntu-latest
     needs: upload-attest-download-artifact
     # environment: dev
     steps:
-      - name: Deploy to Dev Environment
+      - name: Deploying to Dev Environment
         run: echo "Deploying to Dev Environment!"
+      - name: Deployment Complete Dev Environment
+        run: echo "Deployment to Dev Environment Complete!"
       
