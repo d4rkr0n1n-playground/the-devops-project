@@ -26,14 +26,6 @@ jobs:
         run: echo E2E Tests !
       - name: Exploratory Tests
         run: echo Exploratory Tests !
-  test-upload:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v5
-        with:
-          path: .
   preview:
     runs-on: ubuntu-latest
     needs: test
@@ -49,10 +41,11 @@ jobs:
           echo "PR Review Completed !"
   upload-artifact:
     runs-on: ubuntu-latest
-    needs: preview
+    needs: test
     steps:
-      - uses: actions/upload-artifact@v7
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
         with:
           name: the-devops-project-artifact
-          path: ./the-devops-project
+          path: .
       
