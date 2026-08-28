@@ -28,7 +28,7 @@ jobs:
     environment: dev
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v8
         with:
           name: the-devops-project-artifact
       - name: Deploying to Dev Environment
