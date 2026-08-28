@@ -3,6 +3,9 @@ on:
   workflow_dispatch:
   pull_request:
     branches: [ "main" ]
+permissions:
+  # attestations: write
+  id-token: write
 jobs:
   upload-artifact:
     runs-on: ubuntu-latest
