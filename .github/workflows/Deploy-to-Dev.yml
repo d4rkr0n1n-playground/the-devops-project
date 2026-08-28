@@ -5,7 +5,7 @@ jobs:
   download-artifact:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v8
+      - uses: actions/download-artifact@v5
         with:
           name: the-devops-project-artifact
       - name: Display structure of downloaded files
