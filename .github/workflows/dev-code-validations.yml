@@ -45,7 +45,7 @@ jobs:
           echo "PR Preview: [link]!"
       - name: PR Changes Review
         run: |
-          echo "${{ inputs.time }}"
+          sleep ${{ inputs.time }}
           sleep 10
       - name: PR Review Completed
         run: |
