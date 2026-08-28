@@ -3,6 +3,16 @@ on:
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:
+    inputs:
+      time:
+        description: 'Select preview time (in sec.).'
+        required: true
+        default: '10'
+        type: choice
+        options:
+        - 10
+        - 30
+        - 60
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -35,7 +45,8 @@ jobs:
           echo "PR Preview: [link]!"
       - name: PR Changes Review
         run: |
-          sleep 60
+          echo ${{ inputs.time }}
+          sleep 10
       - name: PR Review Completed
         run: |
           echo "PR Review Completed !"
