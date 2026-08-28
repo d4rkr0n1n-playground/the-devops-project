@@ -102,7 +102,7 @@ If **source control** is connected:
 - Pull the PR diff automatically from the URL
 - Check CI status and test results
 
-If **~~project tracker** is connected:
+If **project tracker** is connected:
 - Link findings to related tickets
 - Verify the PR addresses the stated requirements
 
