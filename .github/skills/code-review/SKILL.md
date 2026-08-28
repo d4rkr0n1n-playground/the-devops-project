@@ -106,7 +106,7 @@ If **project tracker** is connected:
 - Link findings to related tickets
 - Verify the PR addresses the stated requirements
 
-If **~~knowledge base** is connected:
+If ~~**knowledge base**~~ is connected:
 - Check changes against team coding standards and style guides
 
 ## Tips
