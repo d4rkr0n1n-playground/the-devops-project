@@ -6,7 +6,7 @@ on:
 permissions:
   # attestations: write
   id-token: write
-  contents: write
+  contents: read
 jobs:
   upload-artifact:
     runs-on: ubuntu-latest
