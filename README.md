@@ -27,8 +27,7 @@ This is a lightweight template repository intended to demonstrate DevOps practic
 ├── build/
 │   └── .gitkeep
 ├── LICENSE
-├── README.md
-└── .git/
+└── README.md
 ```
 
 ## CI/CD Workflow Summary
