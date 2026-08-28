@@ -12,6 +12,7 @@ jobs:
         run: echo Building Project !
   test:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: Unit Tests
         run: echo Unit Tests !
@@ -27,6 +28,7 @@ jobs:
         run: echo Exploratory Tests !
   preview:
     runs-on: ubuntu-latest
+    needs: test
     steps:
       - name: PR Preview
         run: |
@@ -39,9 +41,10 @@ jobs:
           echo "PR Review Completed !"
   upload-artifact:
     runs-on: ubuntu-latest
+    needs: preview
     steps:
       - uses: actions/upload-artifact@v7
         with:
           name: the-devops-project-artifact
-          path: .
+          path: /
       
