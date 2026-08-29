@@ -1,6 +1,8 @@
 name: Dev Deployment
 on:
   workflow_dispatch:
+  schedule:
+     - cron: "0 10 * * 1"
 jobs:
   upload-and-attest-artifact:
     name: Upload and Attest Artifact
